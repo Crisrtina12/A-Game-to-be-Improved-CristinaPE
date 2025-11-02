@@ -12,6 +12,8 @@ import javafx.scene.shape.Line;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Random;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
 public class GameController {
 
@@ -69,6 +71,13 @@ public class GameController {
                 // Revisar fin del juego
                 if (model.isGameOver()) {
                     stop();
+
+                    // 🔊 Reproducir sonido de Game Over
+                    String soundPath = getClass().getResource("/com/ieselgrao/gametofork/sounds/gameover.wav").toExternalForm();
+                    Media sound = new Media(soundPath);
+                    MediaPlayer gameOverPlayer = new MediaPlayer(sound);
+                    gameOverPlayer.play();
+
                     try {
                         MainApplication.switchToGameOverView();
                     } catch (IOException e) {
@@ -96,6 +105,13 @@ public class GameController {
         circle.setOnMouseClicked(event -> {
             model.addScore((int) circle.getUserData());
             gamePane.getChildren().remove(circle);
+
+            // 🔊Reproducir sonido al hacer clic
+            String soundPath = getClass().getResource("/com/ieselgrao/gametofork/sounds/click.wav").toExternalForm();
+            Media sound = new Media(soundPath);
+            MediaPlayer clickPlayer = new MediaPlayer(sound);
+            clickPlayer.play();
+
             event.consume();
         });
 
