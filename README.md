@@ -17,7 +17,6 @@
 7. Se probó el juego en IntelliJ, verificando el correcto funcionamiento del sonido.
 
 ##  Capturas del proceso
-(Coloca aquí tus imágenes guardadas en la carpeta `img`, por ejemplo:)
 ![Sonido Game Over](./img/SonidoGameOver.png)
 ![Nueva rama y posterior fusión con Main](./img/NuevaRamaLueMain.png)
 ![Nueva carpeta con los archivos de audio](./img/NuevaCarpetaSounds.png)
