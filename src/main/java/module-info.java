@@ -1,6 +1,7 @@
 module com.ieselgrao.gametofork {
     requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.media;
 
 
     opens com.ieselgrao.gametofork to javafx.fxml;
